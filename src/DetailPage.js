@@ -36,26 +36,72 @@ function DetailPage(props) {
   console.log(user);*/
 
   return (
-    <Container style={{ fontSize: "25px", color: "#C1EDCC" }}>
+    <Container
+      style={{
+        fontSize: "25px",
+        color: "#251351",
+        backgroundColor: "#c1edcc",
+        padding: "50px 30px",
+      }}
+    >
       <div>
         <h2>Main info</h2>
-        <p>Name: {users.name}</p>
-        <p>Phone: {users.phone}</p>
-        <p>Email: {users.email}</p>
-        <p>Username: {users.username}</p>
-        <p>Website: {users.website}</p>
-        <h2>Address</h2>
-        {/*We add the following syntax as we try to access data before they are there since we use useEffect*/}
-        <p>Suite: {users && users.address && users.address.suite}&nbsp;</p>
-        <p>Street: {users && users.address && users.address.street}&nbsp;</p>
-        <p>City: {users && users.address && users.address.city}&nbsp;</p>
-        <h2>Company</h2>
-        <p>Name: {users && users.company && users.company.name}&nbsp;</p>
         <p>
-          Catchphrase: {users && users.company && users.company.catchPhrase}
+          <strong>Name:</strong> {users.name}
+        </p>
+        <p>
+          <strong>Phone:</strong> {users.phone}
+        </p>
+        <p>
+          <strong>Email:</strong> {users.email}
+        </p>
+        <p>
+          <strong>Username:</strong> {users.username}
+        </p>
+        <p>
+          <strong>Website:</strong> {users.website}
+        </p>
+        <h2
+          style={{
+            marginTop: "25px",
+          }}
+        >
+          Address
+        </h2>
+        {/*We add the following syntax as we try to access data before useEffect runs*/}
+        <p>
+          <strong>Suite:</strong>{" "}
+          {users && users.address && users.address.suite}&nbsp;
+        </p>
+        <p>
+          <strong>Street:</strong>{" "}
+          {users && users.address && users.address.street}&nbsp;
+        </p>
+        <p>
+          <strong>City:</strong> {users && users.address && users.address.city}
           &nbsp;
         </p>
-        <p>Business: {users && users.company && users.company.bs}&nbsp;</p>
+        <h2
+          style={{
+            marginTop: "25px",
+          }}
+        >
+          Company
+        </h2>
+        <p>
+          <strong>Name:</strong> {users && users.company && users.company.name}
+          &nbsp;
+        </p>
+        <p>
+          <strong>Catchphrase:</strong>{" "}
+          {users && users.company && users.company.catchPhrase}
+          &nbsp;
+        </p>
+        <p>
+          <strong>Business:</strong>{" "}
+          {users && users.company && users.company.bs}
+          &nbsp;
+        </p>
       </div>
     </Container>
   );
