@@ -5,9 +5,6 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
-/*styles is a package to style the components. We could style the components with inline styling
-but we cannot style them by writing a class in index.css and then using it here in the card component.
-This option is called css inside javascript.*/
 import { makeStyles } from "@material-ui/core/styles";
 
 /*buttonStyle is a class which contains several styles.
